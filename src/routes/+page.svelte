@@ -16,7 +16,7 @@
     const rect = item.getBoundingClientRect();
     const itemCenter = rect.left + rect.width / 2;
     const distance = Math.abs(containerCenter - itemCenter);
-    const scale = Math.max(0.1, 0.95 - distance / containerCenter / 5);
+    const scale = Math.max(0.85, 0.95 - distance / containerCenter / 5);
 
     item.style.transform = `scale(${scale})`;
 
@@ -32,7 +32,7 @@
     if (index === closestItemIndex) {
       item.style.opacity = "1"; // Fully visible
       } else {
-      item.style.opacity = "0.5"; // Dimmed effect
+      item.style.opacity = "0.7"; // Dimmed effect
       }
   });
 
@@ -89,7 +89,7 @@
       {#each Array(5) as _, index}
         <div
             class="shadow-[rgba(163,_215,_248,_0.5)_5px_0px_6.4px_0px]  transition-opacity  duration-100 scroll-item snap-center bg-red-500 text-white text-center w-[65vw] p-8 flex-col rounded-xl flex-shrink-0 h-[380px] flex items-center justify-between cursor-pointer"
-            style="background: linear-gradient(35deg,  #ffffff, #f7f7f7);"
+            style="background: linear-gradient(35deg,  #ffffff, #f7f7f7);"git remote add origin
           >
           <h1 class="text-[#1A97E4] text-xl font-inter font-semibold ">Популярный {index + 1}</h1>
           <div>
