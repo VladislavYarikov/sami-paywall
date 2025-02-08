@@ -75,7 +75,7 @@
     });
   </script>
   
-  <section class="pt-16 px-6 flex flex-row gap-6">
+  <section class="pt-8 px-6 flex flex-row gap-6">
     <ArrowLeft size={40} color="#000000" />
     <div class="flex flex-col gap-2">
         <h1 class="text-4xl font-inter font-semibold">Подписка</h1>
