@@ -79,17 +79,22 @@
     <ArrowLeft size={40} color="#000000" />
     <div class="flex flex-col gap-2">
         <h1 class="text-4xl font-inter font-semibold">Подписка</h1>
-        <h1 class="text-gray-400 text-lg font-inter">Какая-то информация о подписке. Информация</h1>
+        <h1 class="text-gray-400 text-lg font-inter">Какая-то информация о подписке.</h1>
     </div>
   </section>
-  <section class="pt-24 flex flex-col items-center justify-center gap-10">
+
+  <section class="absolute w-[100vw] top-[30%]
+  flex flex-col items-center justify-center gap-10">
     <div
       class="scroll-container w-full overflow-x-auto flex snap-x snap-mandatory scrollbar-hide px-[50%] scroll-smooth"
     >
       {#each Array(5) as _, index}
         <div
-            class="shadow-[rgba(163,_215,_248,_0.5)_5px_0px_6.4px_0px]  transition-opacity  duration-100 scroll-item snap-center bg-red-500 text-white text-center w-[65vw] p-8 flex-col rounded-xl flex-shrink-0 h-[380px] flex items-center justify-between cursor-pointer"
-            style="background: linear-gradient(35deg,  #ffffff, #f7f7f7);"git remote add origin
+            class="shadow-[rgba(163,_215,_248,_0.5)_5px_0px_6.4px_0px] 
+            transition-opacity  duration-100 scroll-item snap-center 
+            bg-red-500 text-white text-center w-[65vw] max-w-96 p-8 
+            flex-col rounded-xl flex-shrink-0 h-[380px] flex items-center justify-between cursor-pointer"
+            style="background: linear-gradient(35deg,  #ffffff, #f7f7f7);"
           >
           <h1 class="text-[#1A97E4] text-xl font-inter font-semibold ">Популярный {index + 1}</h1>
           <div>
@@ -101,7 +106,7 @@
         </div>
       {/each}
     </div>
-    <div class="w-full flex flex-row px-36 justify-between">
+    <div class="w-[65vw] max-w-96 flex flex-row justify-between">
         {#each Array(5) as _, index}
           <div class="scroll-dot h-2 w-2 bg-slate-200 transition-all duration-300 rounded-full"></div>
         {/each}
