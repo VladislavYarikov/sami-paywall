@@ -79,7 +79,7 @@
     <ArrowLeft size={40} color="#000000" />
     <div class="flex flex-col gap-2">
         <h1 class="text-4xl font-inter font-semibold">Подписка</h1>
-        <h1 class="text-gray-400 text-lg font-inter">Какая-то информация о подписке.</h1>
+        <h1 class="text-gray-400 text-lg font-inter">Какая-то информация о подписке. Информация</h1>
     </div>
   </section>
   <section class="pt-24 flex flex-col items-center justify-center gap-10">
