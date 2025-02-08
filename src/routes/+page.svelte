@@ -106,7 +106,7 @@
         </div>
       {/each}
     </div>
-    <div class="w-[65vw] max-w-96 flex flex-row justify-between">
+    <div class="w-[65vw] max-w-96 px-10 flex flex-row justify-between">
         {#each Array(5) as _, index}
           <div class="scroll-dot h-2 w-2 bg-slate-200 transition-all duration-300 rounded-full"></div>
         {/each}
