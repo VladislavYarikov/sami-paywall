@@ -89,24 +89,40 @@
       class="scroll-container w-full overflow-x-auto flex snap-x snap-mandatory scrollbar-hide px-[50%] scroll-smooth"
     >
       {#each Array(5) as _, index}
-        <div
-            class="shadow-[rgba(163,_215,_248,_0.5)_5px_0px_6.4px_0px] 
-            transition-opacity  duration-100 scroll-item snap-center 
-            bg-red-500 text-white text-center w-[65vw] max-w-96 p-8 
-            flex-col rounded-xl flex-shrink-0 h-[380px] flex items-center justify-between cursor-pointer"
-            style="background: linear-gradient(35deg,  #ffffff, #f7f7f7);"
-          >
-          <h1 class="text-[#1A97E4] text-xl font-inter font-semibold ">Популярный {index + 1}</h1>
-          <div>
-            <h1 class="text-[#1A97E4] text-4xl font-inter font-semibold ">30-дней</h1>
-          <h1 class="text-[#7D7D7D] text-sm font-inter font-medium ">Какая-то информация</h1>
-          </div>
-          <button class="shadow-[inset_-5px_5px_12.5px_0px_rgba(255,_255,_255,_0.25)]
-          bg-gradient-to-r from-sky-500 to-blue-400 text-white text-base font-inter font-semibold px-4 py-4 rounded-md w-full">1200 руб</button>
-        </div>
+      <div
+      class="relative shadow-[rgba(163,_215,_248,_0.5)_5px_0px_6.4px_0px] 
+      overflow-hidden
+      transition-opacity duration-100 scroll-item snap-center 
+      bg-red-500 text-white text-center w-[65vw] max-w-96 p-8 
+      flex-col rounded-xl flex-shrink-0 h-[380px] flex items-center justify-between cursor-pointer"
+      style="background: linear-gradient(35deg,  #ffffff, #f7f7f7);"
+    >
+      <!-- Blue Border at Bottom Left -->
+      <!-- Pseudo-element to create the smooth left and bottom border transition -->
+  <div class="absolute bottom-0 left-0 
+  rounded-xl border-l-2 border-b-2 border-[linear-gradient(to_right,black_50%,transparent_100%)]
+  h-full w-full "></div>
+    
+      <h1 class="text-[#1A97E4] text-xl font-inter font-semibold">
+        Популярный {index + 1}
+      </h1>
+      <div>
+        <h1 class="text-[#1A97E4] text-4xl font-inter font-semibold">30-дней</h1>
+        <h1 class="text-[#7D7D7D] text-sm font-inter font-medium">
+          Какая-то информация
+        </h1>
+      </div>
+      <button
+        class="shadow-[inset_-5px_5px_12.5px_0px_rgba(255,_255,_255,_0.25)]
+        bg-gradient-to-r from-sky-500 to-blue-400 text-white text-base font-inter font-semibold px-4 py-4 rounded-md w-full"
+      >
+        1200 руб
+      </button>
+    </div>
+    
       {/each}
     </div>
-    <div class="w-[65vw] max-w-96 px-10 flex flex-row justify-between">
+    <div class="w-[25vw] max-w-36 flex flex-row justify-between">
         {#each Array(5) as _, index}
           <div class="scroll-dot h-2 w-2 bg-slate-200 transition-all duration-300 rounded-full"></div>
         {/each}
