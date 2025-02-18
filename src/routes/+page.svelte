@@ -124,17 +124,22 @@
               overflow-hidden
               transition-opacity duration-100 scroll-item snap-center 
               border-2 text-white text-center w-[65vw] max-w-96 p-8 pt-5 
-              flex-col rounded-xl flex-shrink-0 h-[380px] flex items-center justify-between cursor-pointer"
+              flex-col rounded-xl flex-shrink-0 h-[380px] flex items-center justify-between cursor-pointer
+              max-[380px]:h-[280px]
+              "
               style="background: linear-gradient(35deg,  #ffffff, #f7f7f7);"
             >
               
-              <h1 class="text-sky-500  text-4xl font-inter font-semibold">30-дней</h1>
-              <h1 class="text-slate-400 text-2xl font-inter font-bold">
+              <h1 class="text-sky-500  text-4xl font-inter font-semibold
+              max-[380px]:text-3xl">30-дней</h1>
+              <h1 class="text-slate-400 text-2xl font-inter font-bold
+              max-[380px]:text-lg">
                 2400 руб.
               </h1>
               <button
                 class="shadow-[inset_-5px_5px_12.5px_0px_rgba(255,_255,_255,_0.25)]
-                bg-gradient-to-r from-sky-500 to-blue-400 text-white text-base font-inter font-semibold px-4 py-4 rounded-md w-full"
+                bg-gradient-to-r from-sky-500 to-blue-400 text-white text-base font-inter font-semibold px-4 py-4 rounded-md w-full
+                max-[380px]:text-xs"
               >
                 Перейти к оплате
               </button>
@@ -166,10 +171,13 @@
           <div class="pt-0 pb-20 px-7 flex flex-col
           justify-between h-full">
             {#each Array(2) as _, index}
-              <div class="w-full h-auto flex flex-col rounded-xl bg-white gap-5 p-10"
+              <div class="w-full h-auto flex flex-col rounded-xl bg-white gap-5 p-10
+              max-[380px]:p-5"
               style="filter: drop-shadow(0 4px 4px rgba(163, 215, 248, 0.5)); box-shadow: inset 0 4px 4px rgba(163, 215, 248, 0.5);">
-                <h1 class="text-sky-600 text-3xl font-inter font-bold text-center">Заголовок {index}</h1>
-                <h1 class="font-inter text-left">Какая-то информация. Инфа фафваКакая-то информация. Какая-то информация. Какая-то информация. Какая-то информация.</h1>
+                <h1 class="text-sky-600 text-3xl font-inter font-bold text-center
+                max-[380px]:text-xl">Заголовок {index}</h1>
+                <h1 class="font-inter text-left text-sm
+                max-[380px]:text-xs">Какая-то информация. Инфа фафваКакая-то информация. Какая-то информация. Какая-то информация. Какая-то информация.</h1>
               </div>
             {/each}
             <div class="w-full h-auto flex flex-col rounded-xl bg-sky-500 gap-5 p-5"
