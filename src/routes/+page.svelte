@@ -38,7 +38,7 @@
               const rect = item.getBoundingClientRect();
               const itemCenter = rect.left + rect.width / 2;
               const distance = Math.abs(containerCenter - itemCenter);
-              const scale = Math.max(0.85, 0.95 - distance / containerCenter / 5);
+              const scale = Math.max(0.75, 0.95 - distance / containerCenter / 5);
 
               item.style.transform = `scale(${scale})`;
 
@@ -138,8 +138,8 @@
                   {priceArr[index]} руб.
                 </h1>
                 
-                <ChevronLeft size={60} color={closestItemIndex == index ? "#0ea5e9" : "#809CAD"}  class="absolute top-0 bottom-0 left-0" style="margin: auto 0; transform: translateX(-50%)"/>
-                <ChevronRight size={60} color={closestItemIndex == index ? "#0ea5e9" : "#809CAD"}  class="absolute top-0 bottom-0 right-0" style="margin: auto 0; transform: translateX(50%)"/>
+                <ChevronLeft size={50} strokeWidth={1.5} color={closestItemIndex == index ? "#0ea5e9" : "#809CAD"}  class="absolute top-0 bottom-0 left-0 {index == 0 ? "invisible" : "visible"}" style="margin: auto 0; transform: translateX(-70%)"/>
+                <ChevronRight size={50} strokeWidth={1.5} color={closestItemIndex == index ? "#0ea5e9" : "#809CAD"}  class="absolute top-0 bottom-0 right-0 {index == 5 ? "invisible" : "visible"}" style="margin: auto 0; transform: translateX(70%)"/>
               </div>
               <button
                 class="shadow-[inset_-5px_5px_12.5px_0px_rgba(255,_255,_255,_0.25)]
