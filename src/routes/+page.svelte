@@ -61,7 +61,7 @@
             // Update dot styles
             dots.forEach((dot, index) => {
               if (index === closestItemIndex) {
-                dot.style.transform = "scale(2.5)"; // 200% size
+                dot.style.transform = "scale(2, 2.5)"; // 200% size
                 dot.style.backgroundColor = "#1A97E4"; // Blue color
               } else {
                 dot.style.transform = "scale(1)"; // Normal size
@@ -110,7 +110,7 @@
         <!-- Dots -->
         <div class="w-[25vw] max-w-36 flex flex-row justify-between pb-10">
           {#each Array(5) as _, index}
-            <div class="scroll-dot h-2 w-2 bg-slate-200 transition-all duration-300 rounded-full"></div>
+            <div class="scroll-dot h-2 w-2 bg-slate-200 transition-all duration-300 rounded-sm"></div>
           {/each}
         </div>
       
