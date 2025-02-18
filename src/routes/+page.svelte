@@ -1,10 +1,11 @@
 <script lang="ts">
     import { onMount } from "svelte";
-    import { ArrowLeft, ChevronUp } from "lucide-svelte";
+    import { ArrowLeft, ChevronLeft, ChevronRight, ChevronUp } from "lucide-svelte";
 	  import { fade } from "svelte/transition";
 
     let open = $state(false);
     let listScrollAnimationTime = 500;
+    let closestItemIndex = $state(0);
 
     let daysArr = [10, 30, 60, 90, 180, 360];
     let priceArr = [800, 1200, 2300, 3200, 5900, 9900];
@@ -31,7 +32,6 @@
 
           function updateSizes() {
             const containerCenter = container.clientWidth / 2;
-            let closestItemIndex = 0;
             let minDistance = Infinity;
 
             items.forEach((item, index) => {
@@ -129,13 +129,18 @@
               "
               style="background: linear-gradient(35deg,  #ffffff, #f7f7f7);"
             >
-              
               <h1 class="text-sky-500  text-4xl font-inter font-semibold
               max-[380px]:text-3xl">{daysArr[index]}-дней</h1>
-              <h1 class="text-slate-400 text-2xl font-inter font-bold
-              max-[380px]:text-lg">
-                {priceArr[index]} руб.
-              </h1>
+              
+              <div class="relative w-full">
+                <h1 class="text-slate-400 text-2xl font-inter font-bold
+                max-[380px]:text-lg">
+                  {priceArr[index]} руб.
+                </h1>
+                
+                <ChevronLeft size={60} color={closestItemIndex == index ? "#0ea5e9" : "#809CAD"}  class="absolute top-0 bottom-0 left-0" style="margin: auto 0; transform: translateX(-50%)"/>
+                <ChevronRight size={60} color={closestItemIndex == index ? "#0ea5e9" : "#809CAD"}  class="absolute top-0 bottom-0 right-0" style="margin: auto 0; transform: translateX(50%)"/>
+              </div>
               <button
                 class="shadow-[inset_-5px_5px_12.5px_0px_rgba(255,_255,_255,_0.25)]
                 bg-gradient-to-r from-sky-500 to-blue-400 text-white text-base font-inter font-semibold px-4 py-4 rounded-md w-full
