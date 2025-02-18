@@ -194,7 +194,7 @@
       </div>
 
     <div class="w-full flex text-slate-400  text-sm font-inter p-4 absolute bottom-0">
-      <h1>Оплачиваю услугу, <br>
+      <h1>Оплачивая услугу, <br>
         вы соглашаетесь с <u><a href="">офертой</a></u></h1>
     </div>
   </section>
