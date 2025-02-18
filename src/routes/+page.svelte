@@ -3,11 +3,11 @@
     import { ArrowLeft, ChevronUp } from "lucide-svelte";
 	  import { fade } from "svelte/transition";
 
-    
     let open = $state(false);
     let listScrollAnimationTime = 500;
 
-  
+    let daysArr = [10, 30, 60, 90, 180, 360];
+    let priceArr = [800, 1200, 2300, 3200, 5900, 9900];
   
     onMount(() => {
       const container = document.querySelector(".scroll-container") as HTMLElement;
@@ -109,7 +109,7 @@
       transition-all duration-100">
         <!-- Dots -->
         <div class="w-[25vw] max-w-36 flex flex-row justify-between pb-10">
-          {#each Array(5) as _, index}
+          {#each Array(6) as _, index}
             <div class="scroll-dot h-2 w-2 bg-slate-200 transition-all duration-300 rounded-sm"></div>
           {/each}
         </div>
@@ -118,7 +118,7 @@
           class="scroll-container w-full overflow-x-auto flex snap-x snap-mandatory scrollbar-hide px-[50%] scroll-smooth"
         >
           <!-- The card -->
-          {#each Array(5) as _, index}
+          {#each Array(6) as _, index}
             <div
               class="relative shadow-[rgba(163,_215,_248,_0.5)_5px_0px_6.4px_0px] 
               overflow-hidden
@@ -131,10 +131,10 @@
             >
               
               <h1 class="text-sky-500  text-4xl font-inter font-semibold
-              max-[380px]:text-3xl">30-дней</h1>
+              max-[380px]:text-3xl">{daysArr[index]}-дней</h1>
               <h1 class="text-slate-400 text-2xl font-inter font-bold
               max-[380px]:text-lg">
-                2400 руб.
+                {priceArr[index]} руб.
               </h1>
               <button
                 class="shadow-[inset_-5px_5px_12.5px_0px_rgba(255,_255,_255,_0.25)]
