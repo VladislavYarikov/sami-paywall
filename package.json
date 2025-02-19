@@ -33,6 +33,8 @@
 		"vitest": "^3.0.0"
 	},
 	"dependencies": {
-		"@fontsource/inter": "^5.1.1"
+		"@fontsource/inter": "^5.1.1",
+		"postcss": "^8.5.2",
+		"tailwind-merge": "^3.0.1"
 	}
 }

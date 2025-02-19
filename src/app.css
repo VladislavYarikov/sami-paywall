@@ -1,12 +1,27 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.scroll-container {
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE/Edge */
-  }
-  
-  .scroll-container::-webkit-scrollbar {
-    display: none; /* Chrome, Safari */
+
+
+  @layer components {
+    .scroll-container {
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE/Edge */
+    }
+    
+    .scroll-container::-webkit-scrollbar {
+      display: none; /* Chrome, Safari */
+    }
+
+    .scroll-item {
+      @apply relative overflow-hidden 
+      h-[380px] w-[65vw] max-w-96 p-8 pt-5 
+      flex flex-col flex-shrink-0 items-center justify-between cursor-pointer 
+      border-2 rounded-xl text-white text-center 
+      shadow-[rgba(163,_215,_248,_0.5)_5px_0px_6.4px_0px] 
+      transition-opacity duration-100 snap-center 
+      
+      max-[380px]:h-[280px];
+    }
   }
