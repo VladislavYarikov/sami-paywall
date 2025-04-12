@@ -123,7 +123,7 @@
         <ArrowLeft size={30} color="#000000" />
       </button>
       <div class="flex flex-col gap-2">
-          <h1 class="text-2xl font-inter font-semibold">Подписка</h1>
+          <h1 class="text-2xl font-inter font-semibold">Подписка test</h1>
       </div>
     </section>
     
